@@ -1,3 +1,39 @@
+sensible-utils (0.0.7) unstable; urgency=low
+
+  [ David Prévot <taffit@debian.org> ]
+  * set Multi-Arch: foreign. Closes: #666102
+  * French, by David Prévot. Closes: #603883
+  * German, by Helge Kreutzmann. Closes: #625897
+  * Spanish, by Omar Campagne. Closes: #636239
+  * Japanese, by KURASAWA Nozomu. Closes: #650641
+  * Italian, by Beatrice Torracca. Closes: #672650
+
+  [ Anibal Monsalve Salazar ]
+  * Fix out-of-date-standards-version
+  * Fix debian-rules-missing-recommended-target
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 14 May 2012 17:23:27 +1000
+
+sensible-utils (0.0.6) unstable; urgency=low
+
+  * New maintainer 
+  * French man page update from David Prévot
+    Closes: 603883
+  * Fix copyright-refers-to-symlink-license
+  * Fix maintainer-script-without-set-e
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 26 Nov 2010 00:18:17 +1100
+
+sensible-utils (0.0.5) unstable; urgency=low
+
+  * sensible-editor.1: Add reference to VISUAL environment variable.
+    closes: #603244.
+  * Add Spanish man page from Omar Campagne.  closes: #602283.
+  * Bump to Standards-Version 3.9.1.
+  * Orphan the package.
+
+ -- Clint Adams <clint@gnu.org>  Sun, 14 Nov 2010 01:24:38 -0500
+
 sensible-utils (0.0.4) unstable; urgency=low
 
   * Patch from Robert Luberda to fix previous Polish man page patch.

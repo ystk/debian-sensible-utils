@@ -1,11 +1,12 @@
 This is the Debian GNU/Linux package sensible-utils.
 
-It is an original Debian package, now maintained by
-Clint Adams <schizo@debian.org>.
+It is an original Debian package, was maintained by
+Clint Adams <schizo@debian.org>.  It is now maintained by
+Anibal Monsalve Salazar <anibal@debian.org>.
 
 All its programs (sensible-editor, sensible-pager, and sensible-browser)
 may be redistributed under the terms of the GNU GPL, Version 2 or later,
-found on Debian systems in the file /usr/share/common-licenses/GPL.
+found on Debian systems in the file /usr/share/common-licenses/GPL-2.
 
 sensible-editor is
 Copyright © 1997  Guy Maor

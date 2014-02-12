@@ -49,7 +49,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-subdir = po4a/pl
+subdir = po4a/es
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -92,8 +92,8 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(manfronedir)"
-DATA = $(manfrone_DATA)
+am__installdirs = "$(DESTDIR)$(manesonedir)"
+DATA = $(manesone_DATA)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
@@ -168,8 +168,8 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign
-manfronedir = $(mandir)/pl/man1
-manfrone_DATA = sensible-editor.1
+manesonedir = $(mandir)/es/man1
+manesone_DATA = sensible-editor.1
 all: all-am
 
 .SUFFIXES:
@@ -182,9 +182,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign po4a/pl/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign po4a/es/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign po4a/pl/Makefile
+	  $(AUTOMAKE) --foreign po4a/es/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -203,27 +203,27 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
-install-manfroneDATA: $(manfrone_DATA)
+install-manesoneDATA: $(manesone_DATA)
 	@$(NORMAL_INSTALL)
-	@list='$(manfrone_DATA)'; test -n "$(manfronedir)" || list=; \
+	@list='$(manesone_DATA)'; test -n "$(manesonedir)" || list=; \
 	if test -n "$$list"; then \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(manfronedir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(manfronedir)" || exit 1; \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(manesonedir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(manesonedir)" || exit 1; \
 	fi; \
 	for p in $$list; do \
 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
 	  echo "$$d$$p"; \
 	done | $(am__base_list) | \
 	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(manfronedir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(manfronedir)" || exit $$?; \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(manesonedir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(manesonedir)" || exit $$?; \
 	done
 
-uninstall-manfroneDATA:
+uninstall-manesoneDATA:
 	@$(NORMAL_UNINSTALL)
-	@list='$(manfrone_DATA)'; test -n "$(manfronedir)" || list=; \
+	@list='$(manesone_DATA)'; test -n "$(manesonedir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
-	dir='$(DESTDIR)$(manfronedir)'; $(am__uninstall_files_from_dir)
+	dir='$(DESTDIR)$(manesonedir)'; $(am__uninstall_files_from_dir)
 tags: TAGS
 TAGS:
 
@@ -265,7 +265,7 @@ check-am: all-am
 check: check-am
 all-am: Makefile $(DATA)
 installdirs:
-	for dir in "$(DESTDIR)$(manfronedir)"; do \
+	for dir in "$(DESTDIR)$(manesonedir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -318,7 +318,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-manfroneDATA
+install-data-am: install-manesoneDATA
 
 install-dvi: install-dvi-am
 
@@ -362,7 +362,7 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-manfroneDATA
+uninstall-am: uninstall-manesoneDATA
 
 .MAKE: install-am install-strip
 
@@ -371,11 +371,11 @@ uninstall-am: uninstall-manfroneDATA
 	install install-am install-data install-data-am install-dvi \
 	install-dvi-am install-exec install-exec-am install-html \
 	install-html-am install-info install-info-am install-man \
-	install-manfroneDATA install-pdf install-pdf-am install-ps \
+	install-manesoneDATA install-pdf install-pdf-am install-ps \
 	install-ps-am install-strip installcheck installcheck-am \
 	installdirs maintainer-clean maintainer-clean-generic \
 	mostlyclean mostlyclean-generic pdf pdf-am ps ps-am uninstall \
-	uninstall-am uninstall-manfroneDATA
+	uninstall-am uninstall-manesoneDATA
 
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.

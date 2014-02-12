@@ -25,7 +25,10 @@ endif
 #INSTALL_PROGRAM += -s
 #endif
 
-build:
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
+build-stamp:
 	$(checkdir)
 	CFLAGS="$(CFLAGS)" ./configure --prefix=/usr \
 		                       --mandir=/usr/share/man $(CONFARGS)
@@ -49,8 +52,6 @@ binary-indep:	checkroot build
 	$(INSTALL_DIR) debian/sensible-utils/DEBIAN \
 		       debian/sensible-utils/usr/bin \
 		       debian/sensible-utils/usr/share/man/man1 \
-		       debian/sensible-utils/usr/share/man/fr/man1 \
-		       debian/sensible-utils/usr/share/man/pl/man1 \
 		       debian/sensible-utils/usr/lib/mime/packages \
 		       debian/sensible-utils/usr/share/doc/$(package)
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/sensible-utils INSTALL_PROGRAM="$(INSTALL_PROGRAM)"
@@ -61,10 +62,22 @@ binary-indep:	checkroot build
 	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/fr/man1/sensible-browser.1.gz
 	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/pl/man1/sensible-pager.1.gz
 	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/pl/man1/sensible-browser.1.gz
+	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/es/man1/sensible-pager.1.gz
+	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/es/man1/sensible-browser.1.gz
+	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/de/man1/sensible-pager.1.gz
+	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/de/man1/sensible-browser.1.gz
+	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/ja/man1/sensible-pager.1.gz
+	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/ja/man1/sensible-browser.1.gz
+	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/it/man1/sensible-pager.1.gz
+	ln -s sensible-editor.1.gz debian/sensible-utils/usr/share/man/it/man1/sensible-browser.1.gz
 	$(INSTALL_FILE) debian/changelog debian/sensible-utils/usr/share/doc/$(package)
 	find debian/sensible-utils/usr/share/man/man1 \
+	     debian/sensible-utils/usr/share/man/es/man1 \
 	     debian/sensible-utils/usr/share/man/fr/man1 \
 	     debian/sensible-utils/usr/share/man/pl/man1 \
+	     debian/sensible-utils/usr/share/man/de/man1 \
+	     debian/sensible-utils/usr/share/man/ja/man1 \
+	     debian/sensible-utils/usr/share/man/it/man1 \
              debian/sensible-utils/usr/share/doc/$(package) -type f | xargs gzip -9
 	$(INSTALL_FILE) debian/copyright debian/sensible-utils/usr/share/doc/$(package)
 	$(INSTALL_SCRIPT) debian/postinst debian/sensible-utils/DEBIAN/
