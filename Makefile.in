@@ -230,8 +230,8 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign
 SUBDIRS = po4a
-bin_SCRIPTS = sensible-browser sensible-editor sensible-pager
-man_MANS = sensible-editor.1
+bin_SCRIPTS = sensible-browser sensible-editor sensible-pager select-editor
+man_MANS = sensible-editor.1 select-editor.1
 all: all-recursive
 
 .SUFFIXES:

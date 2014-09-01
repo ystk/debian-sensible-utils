@@ -2,9 +2,9 @@ Source: sensible-utils
 Section: utils
 Priority: required
 Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Standards-Version: 3.9.3
-Vcs-Git: git://git.debian.org/git/private/schizo/sensible-utils.git
-Vcs-Browser: http://git.debian.org/?p=private/schizo/sensible-utils.git
+Standards-Version: 3.9.4
+#Vcs-Git: git://git.debian.org/git/private/schizo/sensible-utils.git
+#Vcs-Browser: http://git.debian.org/?p=private/schizo/sensible-utils.git
 
 Package: sensible-utils
 Architecture: all
