@@ -1,3 +1,11 @@
+sensible-utils (0.0.9+deb8u1) jessie-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Argument injection in sensible-browser (CVE-2017-17512)
+    Thanks to Gabriel Corona (Closes: #881767)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 20 Dec 2017 14:39:04 +0100
+
 sensible-utils (0.0.9) unstable; urgency=low
 
   * Fix bashism in select-editor
